@@ -1,0 +1,141 @@
+:root {
+  --yellow: #ffbb00;
+  --light-yellow: #ffd666;
+  --black: #000000;
+  --dark_bg: #010005;
+  --white: #ffffff;
+  background-color: var(--dark_bg);
+}
+
+body,
+html {
+  background-color: var(--dark_bg);
+  font-family: "Alegreya", serif;
+}
+h2 {
+  margin-left: 15px;
+}
+.main {
+  padding: 2rem;
+  background-color: var(--dark_bg);
+}
+
+img {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--black);
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:hover {
+  background-color: rgb(242, 219, 119);
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+  padding: 0.5em 1em;
+}
+
+nav ul li a:hover {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+  padding: 0.5em 1em;
+}
+
+.main {
+  margin-top: 60px;
+  background-color: var(--dark_bg);
+  padding: 1rem;
+}
+
+.about,
+.projects,
+.contact {
+  background-color: var(--yellow);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  overflow: hidden;
+}
+
+.header h1 {
+  color: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid black;
+}
+
+.project-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: auto;
+}
+
+#projects-carousel {
+  width: 325px;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+#projects-carousel .carousel-control-prev {
+  margin-left: 10px;
+}
+
+#projects-carousel .carousel-control-next {
+  margin-right: 5px;
+}
+
+.carousel {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#email {
+  background-color: var(--light-yellow);
+  margin-left: 15px;
+}
+
+#email:focus {
+  outline: none;
+  border-color: var(--black);
+}
