@@ -7,13 +7,18 @@
   background-color: var(--dark_bg);
 }
 
-body,
-html {
+body {
+  padding-top: 60px;
   background-color: var(--dark_bg);
   font-family: "Alegreya", serif;
+  line-height: 1.6;
 }
 h2 {
   margin-left: 15px;
+}
+
+.header {
+  text-align: center;
 }
 .main {
   padding: 2rem;
@@ -30,6 +35,7 @@ nav {
   left: 0;
   background-color: var(--black);
   width: 100%;
+  z-index: 1;
 }
 
 nav ul {
@@ -138,4 +144,25 @@ nav ul li a:hover {
 #email:focus {
   outline: none;
   border-color: var(--black);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact #submit {
+  width: 125px;
+  justify-content: center;
+  margin-top: 0.5rem;
+  background-color: var(--dark_bg);
+  color: var(--white);
+}
+
+.contact #submit:hover {
+  background-color: var(--light-yellow);
+  color: var(--black);
+  border: 1px solid black;
 }
