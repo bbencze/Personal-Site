@@ -74,7 +74,8 @@ nav ul li a:hover {
 
 .about,
 .projects,
-.contact {
+.contact,
+.experience {
   background-color: var(--yellow);
   border-radius: 8px;
   padding: 1.5rem;
@@ -165,4 +166,9 @@ nav ul li a:hover {
   background-color: var(--light-yellow);
   color: var(--black);
   border: 1px solid black;
+}
+
+.experience p,
+h4 {
+  margin-left: 15px;
 }
