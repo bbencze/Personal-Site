@@ -17,3 +17,22 @@ carousel.addEventListener("slide.bs.carousel", function (event) {
   title.textContent = titles[index];
   desc.textContent = descriptions[index];
 });
+//nav bar code
+
+const nav = document.querySelector(".nav");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  if (lastScrollY < window.scrollY) {
+    nav.classList.add("nav--hidden");
+  } else {
+    nav.classList.remove("nav--hidden");
+  }
+
+  lastScrollY = window.scrollY;
+
+  //bug fix for certain mobile browsers, pulled from tutorial comments
+  if (window.scrollY <= 0) {
+    nav.classList.remove("nav--hidden");
+  }
+});
