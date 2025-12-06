@@ -6,16 +6,24 @@ const descriptions = [
   "A Discord bot made for a friend's server which simulates various casino games.",
 ];
 
+const github_links = [
+  "https://github.com/bbencze/Bee-Game",
+  "https://github.com/bbencze/Pacifica-Quest",
+  "https://github.com/bbencze/Casino-Bot",
+];
+
 const title = document.getElementById("project-title");
 const desc = document.getElementById("project-description");
 
 const carousel = document.querySelector("#projects-carousel");
+const link = document.getElementById("github-link");
 
 carousel.addEventListener("slide.bs.carousel", function (event) {
   const index = event.to;
 
   title.textContent = titles[index];
   desc.textContent = descriptions[index];
+  link.href = github_links[index];
 });
 //nav bar code
 

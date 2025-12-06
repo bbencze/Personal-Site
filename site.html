@@ -20,27 +20,29 @@
       <nav class="nav">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about-target">About Me</a></li>
+          <li><a href="#experience-target">Experience</a></li>
+          <li><a href="#projects-target">Projects</a></li>
+          <li><a href="#contact-target">Contact</a></li>
         </ul>
       </nav>
     </header>
     <section class="main">
       <section id="header" class="header">
-        <h1>Welcome to -'s Personal Site</h1>
+        <h1>Welcome to Bee Bencze's Personal Website</h1>
       </section>
     </section>
     <section id="about" class="about">
+      <a class="anchor" name="about-target"></a>
       <h2>About Me</h2>
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I am a - year old undergraduate at - currently in my -th year of
-            studies in the Computer Science program. I'm hoping to specialize in
-            data analysis and working with large amounts of data, but I enjoy
-            several other aspects of the field including cybersecurity and
-            software development.
+            I am a 22 year old undergraduate at Portland State University
+            currently in my 4th year of studies in the Computer Science program.
+            I'm hoping to specialize in data analysis and working with large
+            amounts of data, but I enjoy several other aspects of the field
+            including cybersecurity and software development.
           </p>
           <p>
             I found my passion for coding in middle school, when some of my
@@ -66,6 +68,7 @@
       </div>
     </section>
     <section id="experience" class="experience">
+      <a class="anchor" name="experience-target"></a>
       <h2>Experience</h2>
       <p>
         As of now, I have no experience in industry, but I have taken several
@@ -86,6 +89,7 @@
       </ul>
     </section>
     <section id="projects" class="projects">
+      <a class="anchor" name="projects-target"></a>
       <h2>My Projects</h2>
 
       <div class="projects-grid">
@@ -145,13 +149,25 @@
             A small game I made where you play as a bee and dodge the attacks of
             other bees while attempting to sting them.
           </p>
+          <form>
+            <a
+              id="github-link"
+              class="link-button"
+              href="https://github.com/bbencze/Bee-Game"
+              target="_blank"
+              >GitHub</a
+            >
+          </form>
         </div>
       </div>
     </section>
     <section id="contact" class="contact">
+      <a class="anchor" name="contact-target"></a>
       <h2>Contact Me</h2>
-      <textarea id="email" name="email" rows="5" cols="40"></textarea>
-      <input id="submit" type="submit" value="Submit" />
+      <form id="contact-form">
+        <textarea id="email" name="email" rows="5" cols="40"></textarea>
+        <input id="submit" type="reset" value="Submit" />
+      </form>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
