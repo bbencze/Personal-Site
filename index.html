@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Placeholder</title>
+    <title>Bee's Site</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -17,9 +17,11 @@
   </head>
   <body>
     <header>
-      <nav class="nav">
+      <nav id="navbar" class="nav">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">Home</a>
+          </li>
           <li><a href="#about-target">About Me</a></li>
           <li><a href="#experience-target">Experience</a></li>
           <li><a href="#projects-target">Projects</a></li>
@@ -46,9 +48,9 @@
           </p>
           <p>
             I found my passion for coding in middle school, when some of my
-            friends convinced me to start learning how to code. It wasn't until
-            high school that I started working on personal projects and decided
-            it was what I wanted to study in University.
+            friends convinced me to start learning how to program. It wasn't
+            until high school that I started working on personal projects and
+            decided it was what I wanted to study in University.
           </p>
           <p>
             Outside of computer science, my hobbies include statistical
@@ -74,7 +76,7 @@
         As of now, I have no experience in industry, but I have taken several
         courses on my way to a computer science degree at PSU.
       </p>
-      <h4>Courses Completed:</h4>
+      <h3>Courses Completed:</h3>
       <ul>
         <li>CS161: Intro to Programming and Problem Solving</li>
         <li>CS162: Intro to Computer Science</li>
@@ -130,7 +132,8 @@
             data-bs-target="#projects-carousel"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous Project</span>
           </button>
 
           <button
@@ -139,7 +142,8 @@
             data-bs-target="#projects-carousel"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next Project</span>
           </button>
         </div>
 
@@ -165,7 +169,8 @@
       <a class="anchor" name="contact-target"></a>
       <h2>Contact Me</h2>
       <form id="contact-form">
-        <textarea id="email" name="email" rows="5" cols="40"></textarea>
+        <label for="email">Write me a message here!</label>
+        <textarea id="email" name="email" rows="5" cols="150"></textarea>
         <input id="submit" type="reset" value="Submit" />
       </form>
     </section>

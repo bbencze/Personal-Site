@@ -5,7 +5,7 @@
   --dark_bg: #010005;
   --white: #ffffff;
   background-color: var(--dark_bg);
-  --nav-height: 43px;
+  --nav-height: 3.5rem;
 }
 
 body {
@@ -15,21 +15,59 @@ body {
   line-height: 1.6;
 }
 
+body p,
+body a {
+  font-size: 2rem;
+}
+body ul li {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+body h3 {
+  font-size: 2.2rem;
+}
+
+.projects h3 {
+  margin-left: -0.1rem;
+}
+
+.header {
+  background-color: var(--yellow);
+  border-radius: 8px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+#header h1 {
+  color: var(--dark_bg);
+  font-size: 5rem;
+}
+
 .anchor {
   position: relative;
   top: -50px;
   left: 0px;
 }
-h2 {
-  margin-left: 15px;
+.projects h2,
+.about h2,
+.experience h2,
+.contact h2 {
+  margin-left: 1rem;
+  font-size: 3rem;
 }
 
 .header {
   text-align: center;
+  padding: 0.15rem;
 }
 .main {
   padding: 2rem;
   background-color: var(--dark_bg);
+}
+
+.visually-hidden {
+  color: black;
+  background-color: white;
 }
 
 img {
@@ -42,7 +80,8 @@ nav {
   left: 0;
   background-color: var(--black);
   width: 100%;
-  height: var(--nav-height);
+  min-height: var(--nav-height);
+  height: auto;
   z-index: 1;
   transition: transform 0.35s ease;
 }
@@ -53,7 +92,7 @@ nav {
   text-decoration: none;
   color: var(--white);
   border-radius: 5px;
-  border: 2px solid black;
+  border: 0.15rem solid black;
 }
 
 .link-button:hover {
@@ -62,7 +101,7 @@ nav {
 }
 
 .nav--hidden {
-  transform: translateY(calc(-1 * var(--nav-height)));
+  transform: translateY(-100%);
 }
 
 nav ul {
@@ -76,12 +115,13 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background-color: rgb(242, 219, 119);
+  background-color: var(--light-yellow);
 }
 
 nav ul li a {
   display: block;
   text-decoration: none;
+  font-size: 1.5rem;
   color: var(--white);
   padding: 0.5em 1em;
 }
@@ -89,7 +129,7 @@ nav ul li a {
 nav ul li a:hover {
   display: block;
   text-decoration: none;
-  background-color: rgb(242, 219, 119);
+  background-color: var(--light-yellow);
   color: var(--black);
   padding: 0.5em 1em;
 }
@@ -128,14 +168,14 @@ nav ul li a:hover {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  border: 3px solid black;
+  border: 0.25rem solid black;
 }
 
 .project-img {
-  width: 300px;
-  height: 300px;
+  width: 36rem;
+  height: 36rem;
   border-radius: 5px;
-  border: 3px solid black;
+  border: 0.25rem solid black;
 }
 
 .projects-grid {
@@ -147,19 +187,22 @@ nav ul li a:hover {
 }
 
 #projects-carousel {
-  width: 325px;
+  width: 100%;
+  max-width: 40rem;
   padding-left: 1rem;
   padding-bottom: 1rem;
 }
 
 #projects-carousel .carousel-control-prev {
-  margin-left: 10px;
+  margin-left: 0.6rem;
   z-index: 0;
+  color: black;
 }
 
 #projects-carousel .carousel-control-next {
-  margin-right: 5px;
+  margin-right: 3rem;
   z-index: 0;
+  color: black;
 }
 
 .carousel {
@@ -170,7 +213,7 @@ nav ul li a:hover {
 #email {
   background-color: var(--light-yellow);
   margin-left: 15px;
-  border: 2px solid black;
+  border: 0.15rem solid black;
 }
 
 #email:focus {
@@ -193,7 +236,8 @@ nav ul li a:hover {
   background-color: var(--dark_bg);
   color: var(--white);
   border-radius: 5px;
-  border: 2px solid black;
+  border: 0.15rem solid black;
+  font-size: 2rem;
 }
 
 .contact #submit:hover {
@@ -202,6 +246,55 @@ nav ul li a:hover {
 }
 
 .experience p,
-h4 {
-  margin-left: 15px;
+h3 {
+  margin-left: 1rem;
+}
+
+.contact label {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about,
+  .projects {
+    text-align: center;
+  }
+
+  .about-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-grid img,
+  .projects-grid img {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-left: auto;
+  }
+
+  #projects-carousel {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 325px;
+    width: 100%;
+  }
+
+  #email {
+    width: 75%;
+    height: 75%;
+    box-sizing: border-box;
+    margin-left: 0;
+  }
 }
