@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bee's Site</title>
+    <!--Imported custom font Alegreya, I just like it-->
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!--navbar-->
     <header>
       <nav id="navbar" class="nav">
         <ul>
@@ -30,10 +32,12 @@
       </nav>
     </header>
     <section class="main">
+      <!--The title for the site-->
       <section id="header" class="header">
         <h1>Welcome to Bee Bencze's Personal Website</h1>
       </section>
     </section>
+    <!--About section which contains a photo and text-->
     <section id="about" class="about">
       <a class="anchor" name="about-target"></a>
       <h2>About Me</h2>
@@ -69,6 +73,7 @@
         </div>
       </div>
     </section>
+    <!--Experience section pramarily consisting of an unordered list of classes I have taken at PSU-->
     <section id="experience" class="experience">
       <a class="anchor" name="experience-target"></a>
       <h2>Experience</h2>
@@ -90,6 +95,7 @@
         <li>PHL314U: Computer Ethics</li>
       </ul>
     </section>
+    <!--Projects section which contains a bootstrap carousel, a description of the image shown, and a github link button-->
     <section id="projects" class="projects">
       <a class="anchor" name="projects-target"></a>
       <h2>My Projects</h2>
@@ -101,14 +107,16 @@
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
+            <!--The image for the carousel is stored here-->
             <div class="carousel-item active">
+              <!--default image to be shown when page loads-->
               <img
                 src="beegame.jpg"
                 class="project-img"
                 alt="A screenshot from Bee Game showing two enemy bees and the player character"
               />
             </div>
-
+            <!--other images in the carousel-->
             <div class="carousel-item">
               <img
                 src="pacifica.jpg"
@@ -125,7 +133,7 @@
               />
             </div>
           </div>
-
+          <!--button controls to change carousel item displayed-->
           <button
             class="carousel-control-prev"
             type="button"
@@ -134,6 +142,7 @@
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous Project</span>
+            <!--hidden text for accesibility-->
           </button>
 
           <button
@@ -144,16 +153,19 @@
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next Project</span>
+            <!--hidden text for accesibility-->
           </button>
         </div>
-
+        <!--header with name of project and text describing it-->
         <div class="project-text">
+          <!--Bee Game is the default project shown first, changing this text is handled by js-->
           <h3 id="project-title">Bee Game</h3>
           <p id="project-description">
             A small game I made where you play as a bee and dodge the attacks of
             other bees while attempting to sting them.
           </p>
           <form>
+            <!--button which takes the user to the github repository for the project-->
             <a
               id="github-link"
               class="link-button"
@@ -165,16 +177,20 @@
         </div>
       </div>
     </section>
+    <!--contact section-->
     <section id="contact" class="contact">
       <a class="anchor" name="contact-target"></a>
       <h2>Contact Me</h2>
       <form id="contact-form">
         <label for="email">Write me a message here!</label>
+        <!--label for accesibility audit-->
         <textarea id="email" name="email" rows="5" cols="150"></textarea>
+        <!--text box for the user to write the message-->
         <input id="submit" type="reset" value="Submit" />
+        <!--"submit" button, actually clears text in the text box-->
       </form>
     </section>
-
+    <!--bootstrap and js scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="site.js"></script>
   </body>

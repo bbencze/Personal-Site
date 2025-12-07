@@ -8,6 +8,14 @@
   --nav-height: 3.5rem;
 }
 
+/*main styling*/
+.main {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: var(--dark_bg);
+}
+
+/*body styling*/
 body {
   padding-top: var(--nav-height);
   background-color: var(--dark_bg);
@@ -27,53 +35,7 @@ body h3 {
   font-size: 2.2rem;
 }
 
-.projects h3 {
-  margin-left: -0.1rem;
-}
-
-.header {
-  background-color: var(--yellow);
-  border-radius: 8px;
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
-#header h1 {
-  color: var(--dark_bg);
-  font-size: 5rem;
-}
-
-.anchor {
-  position: relative;
-  top: -50px;
-  left: 0px;
-}
-.projects h2,
-.about h2,
-.experience h2,
-.contact h2 {
-  margin-left: 1rem;
-  font-size: 3rem;
-}
-
-.header {
-  text-align: center;
-  padding: 0.15rem;
-}
-.main {
-  padding: 2rem;
-  background-color: var(--dark_bg);
-}
-
-.visually-hidden {
-  color: black;
-  background-color: white;
-}
-
-img {
-  display: block;
-}
-
+/*navbar styling*/
 nav {
   position: fixed;
   top: 0;
@@ -84,20 +46,6 @@ nav {
   height: auto;
   z-index: 1;
   transition: transform 0.35s ease;
-}
-
-.link-button {
-  background-color: var(--dark_bg);
-  padding: 0.35rem;
-  text-decoration: none;
-  color: var(--white);
-  border-radius: 5px;
-  border: 0.15rem solid black;
-}
-
-.link-button:hover {
-  background-color: var(--light-yellow);
-  color: black;
 }
 
 .nav--hidden {
@@ -134,10 +82,20 @@ nav ul li a:hover {
   padding: 0.5em 1em;
 }
 
-.main {
-  margin-top: 60px;
-  background-color: var(--dark_bg);
-  padding: 1rem;
+/*anchor for the navbar, this helps it go to a more user-friendly position*/
+.anchor {
+  position: relative;
+  top: -50px;
+  left: 0px;
+}
+
+/*styling for multiple sections*/
+.projects h2,
+.about h2,
+.experience h2,
+.contact h2 {
+  margin-left: 1rem;
+  font-size: 3rem;
 }
 
 .about,
@@ -151,10 +109,22 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
-.header h1 {
-  color: var(--white);
+/*header styling*/
+.header {
+  background-color: var(--yellow);
+  border-radius: 8px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  text-align: center;
+  padding: 0.15rem;
 }
 
+#header h1 {
+  color: var(--dark_bg);
+  font-size: 5rem;
+}
+
+/*about me styling*/
 .about-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -171,11 +141,15 @@ nav ul li a:hover {
   border: 0.25rem solid black;
 }
 
-.project-img {
-  width: 36rem;
-  height: 36rem;
-  border-radius: 5px;
-  border: 0.25rem solid black;
+/*experience section styling*/
+.experience p,
+h3 {
+  margin-left: 1rem;
+}
+
+/*projects styling*/
+.projects h3 {
+  margin-left: -0.1rem;
 }
 
 .projects-grid {
@@ -186,6 +160,7 @@ nav ul li a:hover {
   margin: auto;
 }
 
+/*carousel styling*/
 #projects-carousel {
   width: 100%;
   max-width: 40rem;
@@ -193,15 +168,24 @@ nav ul li a:hover {
   padding-bottom: 1rem;
 }
 
+#projects-carousel .carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+  border: 0.25rem solid black;
+}
+
 #projects-carousel .carousel-control-prev {
   margin-left: 0.6rem;
-  z-index: 0;
+  z-index: 0; /*prevents buttons going over navbar*/
   color: black;
 }
 
 #projects-carousel .carousel-control-next {
-  margin-right: 3rem;
-  z-index: 0;
+  margin-right: 0.4rem; /*positioning these was weird for some reason*/
+  z-index: 0; /*prevents buttons going over navbar*/
   color: black;
 }
 
@@ -210,6 +194,28 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
+/*Hidden text was throwing contrast errors*/
+.visually-hidden {
+  color: black;
+  background-color: white;
+}
+
+/*styling for github link button*/
+.link-button {
+  background-color: var(--dark_bg);
+  padding: 0.35rem;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 5px;
+  border: 0.15rem solid black;
+}
+
+.link-button:hover {
+  background-color: var(--light-yellow);
+  color: black;
+}
+
+/*contact section styling*/
 #email {
   background-color: var(--light-yellow);
   margin-left: 15px;
@@ -245,15 +251,16 @@ nav ul li a:hover {
   color: var(--black);
 }
 
-.experience p,
-h3 {
-  margin-left: 1rem;
-}
-
 .contact label {
   font-size: 1.6rem;
 }
 
+/*misc. styling*/
+img {
+  display: block;
+}
+
+/*media queries for smaller screens*/
 @media (max-width: 768px) {
   .experience {
     display: flex;
@@ -287,7 +294,7 @@ h3 {
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
-    max-width: 325px;
+    max-width: 18rem;
     width: 100%;
   }
 
@@ -296,5 +303,10 @@ h3 {
     height: 75%;
     box-sizing: border-box;
     margin-left: 0;
+  }
+
+  #header h1 {
+    color: var(--dark_bg);
+    font-size: 3rem;
   }
 }
