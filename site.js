@@ -1,18 +1,16 @@
 //project titles
-const titles = ["Bee Game", "Pacifica Quest", "Casino Simulator"];
+const titles = ["Tarasaur", "Shamrock Contestant Manager"];
 
 //project descriptions
 const descriptions = [
-  "A small game I made where you play as a bee and dodge the attacks of other bees while attempting to sting them.",
-  "Final project for CS161 at Portland State. A text-based adventure game with a basic checkpoint-based save and load feature.",
-  "A Discord bot made for a friend's server which simulates various casino games.",
+  "A versatile file archiver written in C. Written for cs333 at Portland State University",
+  "A contestant manager for motorcycle races, storing riders in a Binary Search Tree. Written for cs302 at Portland State University",
 ];
 
 //github links for the projects section
 const github_links = [
-  "https://github.com/bbencze/Bee-Game",
-  "https://github.com/bbencze/Pacifica-Quest",
-  "https://github.com/bbencze/Casino-Bot",
+  "https://github.com/bbencze/Tarasaur",
+  "https://github.com/bbencze/Shamrock-Contestant-Manager",
 ];
 
 //fetch the elements associated with project titles, descriptions, github links, and the acarousel itself
